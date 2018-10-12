@@ -10,6 +10,7 @@
 /julia-*
 /source-dist.tmp
 /source-dist.tmp1
+/stdlib/Pkg/*
 
 *.exe
 *.dll

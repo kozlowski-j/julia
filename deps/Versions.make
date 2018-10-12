@@ -11,6 +11,7 @@ MPFR_VER = 4.0.1
 PATCHELF_VER = 0.9
 MBEDTLS_VER = 2.6.0
 CURL_VER = 7.56.0
+PKG_VER = 1.0.1
 
 # Specify the version of the Mozilla CA Certificate Store to obtain.
 # The versions of cacert.pem are identified by the date (YYYY-MM-DD) of their changes.

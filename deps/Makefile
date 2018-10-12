@@ -150,6 +150,8 @@ ifneq ($(OS), WINNT)
 DEP_LIBS += libwhich
 endif
 
+DEP_LIBS += pkg
+
 DEP_LIBS_STAGED := $(filter-out suitesparse suitesparse-wrapper osxunwind,$(DEP_LIBS)) # unlist targets that have not been converted to use the staged-install
 
 
@@ -168,7 +170,7 @@ uninstall: $(addprefix uninstall-, $(DEP_LIBS_STAGED))
 cleanall: $(addprefix clean-, $(DEP_LIBS))
 distcleanall: $(addprefix distclean-, $(DEP_LIBS))
 	rm -rf $(build_prefix)
-getall: get-llvm get-libuv get-pcre get-openlibm get-dsfmt get-openblas get-lapack get-suitesparse get-unwind get-osxunwind get-gmp get-mpfr get-patchelf get-utf8proc get-objconv get-mbedtls get-libssh2 get-curl get-libgit2 get-libwhich
+getall: get-llvm get-libuv get-pcre get-openlibm get-dsfmt get-openblas get-lapack get-suitesparse get-unwind get-osxunwind get-gmp get-mpfr get-patchelf get-utf8proc get-objconv get-mbedtls get-libssh2 get-curl get-libgit2 get-libwhich get-pkg
 
 include $(SRCDIR)/llvm.mk
 include $(SRCDIR)/libuv.mk
@@ -188,3 +190,4 @@ include $(SRCDIR)/libssh2.mk
 include $(SRCDIR)/curl.mk
 include $(SRCDIR)/libgit2.mk
 include $(SRCDIR)/libwhich.mk
+include $(SRCDIR)/pkg.mk
